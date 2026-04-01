@@ -17,7 +17,6 @@ USE master;
 GO
 
 -- Drop and recreate the 'DataWarehouse' database if it exists
-
 IF EXISTS(SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
 	BEGIN
 		ALTER DATABASE DataWarehouse SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
@@ -25,8 +24,8 @@ IF EXISTS(SELECT 1 FROM sys.databases WHERE name = 'DataWarehouse')
 	END;
 	GO
 
+		
 -- Create DataWarehouse
-
 CREATE DATABASE DataWarehouse;
 GO
 
@@ -34,7 +33,6 @@ USE DataWarehouse;
 GO
 
 -- Create Schemas
-
 CREATE SCHEMA bronze;
 GO
 
